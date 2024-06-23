@@ -26,6 +26,10 @@ function SignUp() {
                         <button type='submit'>Sign Up</button>
                     </div>
                 </form>
+                <div id='login'>
+                    <p> If you already have an account</p>
+                    <a href='/login'>Login</a>
+                </div>
             </div>
                 
          </div>

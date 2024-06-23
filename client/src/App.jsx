@@ -1,14 +1,19 @@
 import React from 'react'
 import SignUp from './signUp.jsx'
-import{BrowserRouter as Router, Route} from 'react-router-dom'
+import LogIn from './Login.jsx'
+import{BrowserRouter,Routes, Route} from 'react-router-dom'
 
 
 function App() {
 
   return (
-    <div>
-      <SignUp />
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path='' element={<SignUp />}></Route>
+          <Route path='/login' element={<LogIn />}></Route>
+      </Routes>
+    </BrowserRouter>
+    
   )
 }
 
