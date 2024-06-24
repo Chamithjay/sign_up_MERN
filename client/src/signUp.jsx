@@ -9,13 +9,9 @@ function SignUp() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('', {Fname: Fname,Lname: Lname,Password: Pwd,Dob: Dob})
-        .then(res => {
-            console.log(res);
-        })
-        .catch(err => {
-            console.log(err);
-        });
+        axios.post('http://localhost:3001', {Fname: Fname,Lname: Lname,Password: Pwd,Dob: Dob})
+        .then(res => {console.log(res);})
+        .catch(err => {console.log(err);});
     }
     return (
         <div>
