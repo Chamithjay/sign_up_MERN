@@ -2,13 +2,14 @@ const mongoose = require('mongoose');
 var express=require('express');
 var cors=require('cors');
 const signUpModel = require('./models/sign_up');
+require('dotenv').config();
 
 
 var app=express();
 app.use(express.json());
 app.use(cors());
 
-var ConnectionString='mongodb+srv://admin:lxl43Z5ZMK94DCx2@cluster0.7i0ra1o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+var ConnectionString=process.env.CONNECTION_STRING
 mongoose.connect(ConnectionString);
 
 app.post('',(req,res)=>{
