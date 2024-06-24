@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import './signUp.css';
 
 function SignUp() {
     const [Fname, setFname] = React.useState('');
@@ -18,7 +19,7 @@ function SignUp() {
         .catch(err => {console.log(err);});
     }
     return (
-        <div>
+        <div id ='background'>
             <div id='form'>
                 <h1>Sign Up</h1>
                 <form onSubmit={handleSubmit}>
